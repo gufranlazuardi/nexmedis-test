@@ -29,14 +29,14 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to) => {
   const token = localStorage.getItem("token");
 
   if (to.meta.requiresAuth && !token) {
-    return next({ name: "Login" });
+    return { name: "Login" };
   }
 
-  next();
+  return true;
 });
 
 export default router;

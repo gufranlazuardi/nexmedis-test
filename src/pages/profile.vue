@@ -13,7 +13,7 @@ import {
   PaginationNext,
   PaginationPrev,
 } from "@/components/ui/pagination";
-import { getListUserApi, Users } from "@/apis";
+import { getListUserApi, type Users } from "@/apis";
 import CardListUser from "@/components/CardListUser.vue";
 
 const router = useRouter();
@@ -127,9 +127,9 @@ const paginationRange = computed(() => {
         <template v-for="item in paginationRange" :key="item">
           <PaginationListItem
             v-if="typeof item === 'number'"
-            :isActive="item === currentPage"
+            :value="item"
+            :active="item === currentPage"
             @click="changePage(item)"
-            class="cursor-pointer"
           >
             <Button
               class="w-10 h-10 p-0"

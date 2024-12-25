@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
 import { Info } from "lucide-vue-next";
 import { ChevronLeft } from "lucide-vue-next";
 import { useRouter } from "vue-router";
 import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/zod";
 import * as z from "zod";
-import { loginApi, registerApi } from "@/apis";
+import { registerApi } from "@/apis";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -28,7 +27,6 @@ import { useToast } from "@/components/ui/toast/use-toast";
 
 const { toast } = useToast();
 
-// Define the form schema
 const formSchema = toTypedSchema(
   z.object({
     email: z.string().email("Please enter a valid email address"),
