@@ -91,7 +91,9 @@ const paginationRange = computed(() => {
 </script>
 
 <template>
-  <div class="flex flex-col max-w-screen-xl mx-auto mt-[2rem]">
+  <div
+    class="flex flex-col max-w-screen-xl mx-auto mt-[2rem] px-[1rem] md:px-[3rem] lg:px-[4rem] xl:px-[4rem] pb-[3rem]"
+  >
     <h1 class="text-xl font-bold mb-4">User List</h1>
 
     <div v-if="error" class="text-red-500">{{ error }}</div>

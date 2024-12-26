@@ -6,12 +6,14 @@ const authStore = useAuthStore();
 </script>
 
 <template>
-  <div class="flex justify-between mt-2 ml-2 px-[4rem] pt-[1rem]">
+  <div
+    class="flex justify-between items-center max-w-screen-xl mx-auto mt-2 px-[1rem] md:px-[3rem] lg:px-[4rem] xl:px-[4rem] pt-[1rem]"
+  >
     <router-link to="/">
       <img
-        src="../../public/nexmedis.png"
+        src="/nexmedis.png"
         alt="nexmedis"
-        class="w-[8rem] h-fit"
+        class="w-16 sm:w-32 h-auto"
       />
     </router-link>
     <router-link to="/profile">
